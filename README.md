@@ -1,1 +1,1 @@
-# My `apple-landing-page` pat project
+# My `apple-landing-page` pet project
