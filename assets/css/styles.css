@@ -25,7 +25,7 @@ body {
 
 .header {
   background-color: #0a0a0a;
-  padding: 33.24px 0 32px;
+  padding: 34px 0 32px; /* Почему такие значения? (42) */
   color: #717171;
   font-size: 24px;
   line-height: 29px;
@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -126,20 +126,21 @@ body {
   padding: 90px 0 150px;
 }
 
-.about__title {
+.about__title,
+.slider__title {
   color: #717171;
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
   text-align: center;
-  margin: 0 0 50px;
   text-transform: uppercase;
+  margin: 0 0 50px;
 }
 
-.about_info {
+.about__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about__text p {
@@ -149,7 +150,7 @@ body {
 }
 
 .about__text p:not(:last-child) {
-  margin: 15px 0 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .about__text p:last-child {
@@ -171,4 +172,41 @@ body {
   object-fit: contain;
   min-width: 100%;
   width: 100%;
+}
+
+.slider__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__item {
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  max-width: 240px;
+}
+
+.slider__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider__image {
+  margin-bottom: 20px;
+  min-width: 100%;
+  max-height: 320px;
+  max-width: 240px;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.slider__color.slider__color_bold {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.slider__color {
+  line-height: 18px;
+  display: block;
 }
