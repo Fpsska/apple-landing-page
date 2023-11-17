@@ -25,7 +25,7 @@ body {
 
 .header {
   background-color: #0a0a0a;
-  padding: 34px 0 32px; /* Почему такие значения? (42) */
+  padding: 34px 0 32px;
   color: #717171;
   font-size: 24px;
   line-height: 29px;
@@ -209,4 +209,49 @@ body {
 .slider__color {
   line-height: 18px;
   display: block;
+}
+
+.feedback {
+  margin-top: 150px;
+}
+
+.feedback__wrapper {
+  background-color: #574b63;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__section {
+  padding: 130px 85px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.feedback__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 10px 10px;
+  margin-bottom: 30px;
+}
+
+.form__input ::placeholder {
+  opacity: 0.5;
+  color: #ffffff;
 }
