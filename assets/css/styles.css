@@ -25,7 +25,7 @@ body {
 
 .header {
   background-color: #0a0a0a;
-  padding: 34px 0 32px;
+  padding: 35px 0;
   color: #717171;
   font-size: 24px;
   line-height: 29px;
@@ -56,6 +56,8 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   text-align: right;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .menu__item {
@@ -65,14 +67,14 @@ body {
 .logo {
   max-width: 40px;
   max-height: 48px;
-  margin: 0 15px;
   overflow: hidden;
+  margin: 0 15px;
 }
 
 .logo__img {
   min-width: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
 }
 
@@ -249,9 +251,59 @@ body {
   border-bottom: 1px solid #f5f5f5;
   padding: 0 10px 10px;
   margin-bottom: 30px;
+  opacity: 0.6;
 }
 
 .form__input ::placeholder {
   opacity: 0.5;
   color: #ffffff;
+}
+
+.form__text {
+  opacity: 0.5;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.form__button {
+  padding: 15px 81px;
+  width: 240px;
+  border-radius: 30px;
+  border: transparent;
+  margin: 30px auto 0 auto;
+  color: #490e84;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+
+.feedback__image {
+  max-width: 600px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.feedback__image img {
+  min-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.footer {
+  background-color: #0a0a0a;
+  color: #717171;
+  padding: 50px 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__link {
+  flex-basis: 0;
+  flex-grow: 1;
 }
