@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,11 @@
     />
     <link rel="stylesheet" href="/assets/css/normalize.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -95,11 +100,11 @@
         </div>
       </section>
 
-      <section class="slider">
-        <div class="container slider__wrapper">
-          <h3 class="slider__title">ВЫБЕРИ СВОЙ ЦВЕТ</h3>
-          <ul class="slider__list">
-            <li class="slider__item">
+      <section class="slider container">
+        <h3 class="slider__title">ВЫБЕРИ СВОЙ ЦВЕТ</h3>
+        <div class="swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
               <img
                 class="slider__image"
                 src="assets/images/silver__iphone.jpg"
@@ -109,7 +114,7 @@
               <span class="slider__color">Серебрянный </span>
             </li>
 
-            <li class="slider__item">
+            <li class="swiper-slide">
               <img
                 class="slider__image"
                 src="assets/images/purple__iphone.jpg"
@@ -119,7 +124,7 @@
               <span class="slider__color">Темно фиолетовый</span>
             </li>
 
-            <li class="slider__item">
+            <li class="swiper-slide">
               <img
                 class="slider__image"
                 src="assets/images/gold__iphone.jpg"
@@ -129,7 +134,7 @@
               <span class="slider__color">Золотой</span>
             </li>
 
-            <li class="slider__item">
+            <li class="swiper-slide">
               <img
                 class="slider__image"
                 src="assets/images/black__iphone.jpg"
@@ -187,5 +192,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets//scripts/index.js"></script>
   </body>
 </html>

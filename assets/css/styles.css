@@ -32,6 +32,7 @@ body {
   position: sticky;
   top: 0;
   opacity: 0.85;
+  z-index: 4;
 }
 
 @media screen and (max-width: 662px) {
@@ -188,7 +189,7 @@ body {
 .about__info {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .about__text p {
@@ -241,20 +242,9 @@ body {
   }
 }
 
-.slider__list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider__item {
-  list-style: none;
+.swiper-slide {
   text-align: center;
-  overflow: hidden;
-  max-width: 240px;
-}
-
-.slider__item:not(:last-child) {
-  margin-right: 20px;
+  width: 100%;
 }
 
 .slider__image {
@@ -264,6 +254,7 @@ body {
   max-width: 240px;
   width: 100%;
   border-radius: 30px;
+  object-fit: cover;
 }
 
 .slider__color.slider__color_bold {
@@ -279,10 +270,6 @@ body {
 }
 
 @media screen and (max-width: 1070px) {
-  .slider__list {
-    flex-direction: column;
-    align-items: center;
-  }
   .slider__color {
     margin-bottom: 30px;
   }
