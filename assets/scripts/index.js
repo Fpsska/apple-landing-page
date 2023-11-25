@@ -32,3 +32,5 @@ const slider = new Swiper(".swiper", {
     },
   },
 });
+
+// ./ SLIDER
