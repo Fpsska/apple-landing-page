@@ -18,10 +18,22 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  color: #0a0a0a;
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: #0a0a0a;
 }
 
 /* general styles */
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 .header {
   background-color: #0a0a0a;
@@ -35,40 +47,53 @@ body {
   z-index: 4;
 }
 
-@media screen and (max-width: 662px) {
-  .header {
-    display: flex;
-  }
-}
-
-.header__logo {
-  margin: 0 15px;
-}
-
-.container {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.nav {
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.menu-button {
+  display: none;
+  width: 40px;
+  height: 20px;
+  color: #0a0a0a;
+}
+
+.menu-button span {
+  background-color: #717171;
+  height: 1px;
+  width: 100%;
+}
+
 .menu {
   display: flex;
+  align-items: center;
   flex-grow: 1;
   flex-basis: 0;
 }
 
-.phone {
-  flex-grow: 1;
-  flex-basis: 0;
-  text-align: right;
-  font-size: 24px;
-  line-height: 29px;
+.header__logo {
+  width: 39px;
+  height: 39px;
+  margin-right: 122px;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.menu__mobile {
+  display: none;
+}
+
+.menu-close-button {
+  max-width: 39px;
+}
+
+.menu-close-image {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 810px) {
@@ -80,30 +105,36 @@ body {
     padding: 20px 0;
   }
 }
-
 .menu__item:not(:last-child) {
   margin-right: 30px;
 }
 
 @media screen and (max-width: 662px) {
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .menu__item,
   .header__phone {
     display: none;
   }
+
+  .logo {
+    overflow: hidden;
+    flex: 0 0 40px;
+  }
+  .logo__img {
+    min-width: 100%;
+    object-fit: contain;
+    height: 100%;
+  }
+  .header__logo {
+    margin-right: 0;
+  }
 }
 
-.logo {
-  max-width: 40px;
-  max-height: 48px;
-  overflow: hidden;
-}
-
-.logo__img {
-  min-width: 100%;
-  width: 100%;
-  object-fit: contain;
-  height: 100%;
-}
+/* header */
 
 .preview {
   background-color: #f5f5f7;
@@ -123,6 +154,7 @@ body {
   text-transform: uppercase;
   margin: 0 0 40px;
   line-height: 77px;
+  text-align: center;
 }
 
 .preview__img {
@@ -170,6 +202,8 @@ body {
     font-size: 32px;
   }
 }
+
+/* preview */
 
 .about {
   padding: 90px 0 150px;
@@ -242,6 +276,8 @@ body {
   }
 }
 
+/* about */
+
 .swiper-slide {
   text-align: center;
   width: 100%;
@@ -275,6 +311,8 @@ body {
   }
 }
 
+/* slider */
+
 .feedback {
   margin-top: 150px;
 }
@@ -282,7 +320,6 @@ body {
 .feedback__wrapper {
   background-color: #574b63;
   display: flex;
-  justify-content: space-between;
 }
 
 .feedback__section {
@@ -290,6 +327,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  max-width: 50%;
+  width: 100%;
 }
 
 .feedback__title {
@@ -303,8 +342,9 @@ body {
 }
 
 .feedback__image {
-  max-width: 600px;
   overflow: hidden;
+  max-width: 50%;
+  width: 100%;
 }
 
 .feedback__image img {
@@ -312,21 +352,6 @@ body {
   width: 100%;
   object-fit: cover;
   height: 100%;
-}
-
-@media screen and (max-width: 1110px) {
-  .feedback__image {
-    display: none;
-  }
-  .feedback__wrapper {
-    display: block;
-  }
-  .feedback__section {
-    text-align: center;
-  }
-  .feedback__inner {
-    padding: 0;
-  }
 }
 
 .form {
@@ -369,6 +394,22 @@ body {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 1110px) {
+  .feedback__image {
+    display: none;
+  }
+  .feedback__wrapper {
+    display: block;
+  }
+  .feedback__section {
+    text-align: center;
+    max-width: 100%;
+  }
+  .feedback__inner {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 490px) {
   .feedback__title {
     font-size: 25px;
@@ -382,14 +423,12 @@ body {
   }
 }
 
+/* feedback */
+
 .footer {
   background-color: #0a0a0a;
   color: #717171;
   padding: 40px 0;
-}
-
-.footer__logo {
-  margin: 0 15px;
 }
 
 .footer__wrapper {
@@ -398,9 +437,15 @@ body {
   align-items: center;
 }
 
-.footer__link {
-  flex-grow: 1;
-  flex-basis: 0;
+.footer__logo {
+  width: 39px;
+  margin-right: 86px;
+}
+
+@media screen and (max-width: 810px) {
+  .footer {
+    padding: 20px 0;
+  }
 }
 
 @media screen and (max-width: 662px) {
@@ -411,14 +456,9 @@ body {
   .footer__wrapper {
     justify-content: center;
   }
+  .footer__logo {
+    margin-right: 0;
+  }
 }
 
-@media screen and (max-width: 810px) {
-  .footer {
-    padding: 20px 0;
-  }
-  .logo {
-    max-width: 30px;
-    max-height: 38px;
-  }
-}
+/* footer */
