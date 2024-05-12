@@ -34,3 +34,11 @@ const slider = new Swiper(".swiper", {
 });
 
 // ./ SLIDER
+
+const menuButton = document.querySelector(".menu-button");
+const menuClose = document.querySelector(".menu-close");
+const menuList = document.querySelector(".menu__mobile-list");
+
+menuButton.addEventListener("click", () => {
+  menuList.classList.add("menu__mobile-list-open");
+});
