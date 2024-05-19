@@ -43,8 +43,6 @@ button {
   line-height: 29px;
   position: sticky;
   top: 0;
-  opacity: 0.85;
-  z-index: 4;
 }
 
 .header__wrapper {
@@ -55,23 +53,23 @@ button {
   justify-items: center;
 }
 
-.menu-button {
+.menu {
+  align-items: center;
+  display: flex;
+}
+
+.menu__button {
   display: none;
   width: 40px;
   height: 20px;
   color: #0a0a0a;
+  margin-right: 20px;
 }
 
-.menu-button span {
+.menu__button span {
   background-color: #717171;
   height: 1px;
   width: 100%;
-}
-
-.menu {
-  align-items: center;
-  display: flex;
-  position: static;
 }
 
 .header__logo {
@@ -83,20 +81,60 @@ button {
   width: 100%;
 }
 
-.menu-close-button {
-  max-width: 39px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.menu-mobile {
+  display: none;
+  width: 352px;
+  text-align: center;
+  background-color: #f5f5f7;
+  margin: 0 auto;
+  padding-top: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
 }
 
-.menu-close-image {
+.menu-mobile__button {
+  max-width: 39px;
+  background-color: #f5f5f7;
+  position: absolute;
+  top: 9px;
+  right: 7px;
+}
+
+.menu-mobile__list {
+  border-bottom: 2px solid #717171;
+  margin: 0 35px;
+  padding-bottom: 35px;
+}
+
+.menu-mobile__item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.menu-mobile__actions {
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+.menu-mobile__actions-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.menu-mobile__logo {
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-mobile__logo-item {
+  width: 39px;
+}
+
+.menu-mobile__image {
   width: 100%;
   height: 100%;
-}
-
-.menu-button {
-  margin-right: 20px;
 }
 
 @media screen and (max-width: 940px) {
@@ -119,7 +157,10 @@ button {
 }
 
 @media screen and (max-width: 662px) {
-  .menu-button {
+  .header__wrapper {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .menu__button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -141,20 +182,20 @@ button {
   }
 
   .header__logo {
-    margin-right: 0;
-    order: 3;
+    display: none;
   }
-  .menu__mobile {
+  .menu-mobile {
+    display: block;
+  }
+
+  .menu-mobile__list {
     display: flex;
+    flex-direction: column;
   }
-
-  .menu__mobile-list {
-    order: 2;
+  .menu-mobile__actions {
+    display: flex;
+    flex-direction: column;
   }
-
-  /* .menu-close-button {
-    position: absolute;
-  } */
 }
 
 /* header */
