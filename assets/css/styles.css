@@ -16,8 +16,8 @@ ul {
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 18px;
+  font-weight: 400;
 }
 
 button {
@@ -36,13 +36,14 @@ button {
 }
 
 .header {
+  font-size: 24px;
+  line-height: 29px;
   background-color: #0a0a0a;
   padding: 35px 0;
   color: #717171;
-  font-size: 24px;
-  line-height: 29px;
   position: sticky;
   top: 0;
+  z-index: 4;
 }
 
 .header__wrapper {
@@ -56,14 +57,15 @@ button {
 .menu {
   align-items: center;
   display: flex;
+  position: static;
 }
 
 .menu__button {
   display: none;
   width: 40px;
   height: 20px;
-  color: #0a0a0a;
   margin-right: 20px;
+  color: #0a0a0a;
 }
 
 .menu__button span {
@@ -72,13 +74,8 @@ button {
   width: 100%;
 }
 
-.header__logo {
-  width: 39px;
-  height: 39px;
-}
-
-.logo__img {
-  width: 100%;
+.menu__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .menu-mobile {
@@ -94,6 +91,7 @@ button {
   right: 0;
   z-index: 4;
   transform: translateY(-100%);
+  border-radius: 1%;
 }
 
 .menu-mobile__button-close {
@@ -102,6 +100,10 @@ button {
   position: absolute;
   top: 9px;
   right: 7px;
+}
+
+.menu-mobile__image {
+  width: 100%;
 }
 
 .menu-mobile__list {
@@ -115,8 +117,8 @@ button {
 }
 
 .menu-mobile__actions {
-  padding: 50px 0;
   font-size: 14px;
+  padding: 50px 0;
 }
 
 .menu-mobile__actions-item:not(:last-child) {
@@ -133,9 +135,13 @@ button {
   width: 39px;
 }
 
-.menu-mobile__image {
+.header__logo {
+  width: 39px;
+}
+
+.logo__img {
   width: 100%;
-  height: 100%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 940px) {
@@ -144,17 +150,11 @@ button {
   }
 }
 
-@media screen and (max-width: 810px) {
-  .menu,
-  .phone {
-    font-size: 14px;
-  }
+@media screen and (max-width: 814px) {
   .header {
     padding: 20px 0;
+    font-size: 14px;
   }
-}
-.menu__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 @media screen and (max-width: 662px) {
@@ -165,26 +165,13 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    order: 1;
   }
   .menu__item,
-  .header__phone {
-    display: none;
-  }
-
-  .logo {
-    overflow: hidden;
-    flex: 0 0 40px;
-  }
-  .logo__img {
-    min-width: 100%;
-    object-fit: contain;
-    height: 100%;
-  }
-
+  .header__phone,
   .header__logo {
     display: none;
   }
+
   .menu-mobile {
     display: block;
     transition: transform 0.7s ease;
@@ -219,11 +206,11 @@ button {
 .preview__title {
   font-size: 64px;
   font-weight: 700;
-  color: #490e84;
-  text-transform: uppercase;
-  margin: 0 0 40px;
   line-height: 77px;
+  text-transform: uppercase;
   text-align: center;
+  color: #490e84;
+  margin: 0 0 40px;
 }
 
 .preview__img {
@@ -241,34 +228,34 @@ button {
 }
 
 .preview__btn {
-  display: inline-block;
-  background-color: #490e84;
-  border-radius: 30px;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
   color: #ffffff;
+  display: inline-block;
+  background-color: #490e84;
+  border-radius: 30px;
   padding: 22px 118px;
 }
 
 @media screen and (max-width: 515px) {
+  .preview__title {
+    font-size: 42px;
+  }
   .preview__btn {
     padding: 22px 60px;
     font-size: 20px;
   }
-  .preview__title {
-    font-size: 42px;
-  }
 }
 
 @media screen and (max-width: 345px) {
-  .preview__btn {
-    padding: 11px 40px;
-    font-size: 18px;
-  }
   .preview__title {
     font-size: 32px;
+  }
+  .preview__btn {
+    padding: 10px 40px;
+    font-size: 18px;
   }
 }
 
@@ -336,7 +323,6 @@ button {
   .about__title {
     font-size: 28px;
   }
-
   .about__text {
     font-size: 12px;
   }
@@ -362,16 +348,16 @@ button {
   object-fit: cover;
 }
 
+.slider__color {
+  line-height: 18px;
+  display: block;
+}
+
 .slider__color.slider__color_bold {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   margin: 0 0 10px 0;
-}
-
-.slider__color {
-  line-height: 18px;
-  display: block;
 }
 
 @media screen and (max-width: 1070px) {
@@ -392,10 +378,10 @@ button {
 }
 
 .feedback__section {
-  padding: 130px 85px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 130px 85px;
   max-width: 50%;
   width: 100%;
 }
@@ -408,19 +394,6 @@ button {
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 30px;
-}
-
-.feedback__image {
-  overflow: hidden;
-  max-width: 50%;
-  width: 100%;
-}
-
-.feedback__image img {
-  min-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
 }
 
 .form {
@@ -447,48 +420,61 @@ button {
 .form__text {
   opacity: 0.5;
   color: #ffffff;
-  margin: 0;
   text-align: center;
+  margin: 0;
 }
 
 .form__button {
+  color: #490e84;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #ffffff;
   padding: 15px 81px;
   max-width: 240px;
   border-radius: 30px;
   border: transparent;
   margin: 30px auto 0 auto;
-  color: #490e84;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #ffffff;
+}
+
+.feedback__image {
+  overflow: hidden;
+  max-width: 50%;
+  width: 100%;
+}
+
+.feedback__image img {
+  min-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 @media screen and (max-width: 1110px) {
-  .feedback__image {
-    display: none;
+  .feedback__inner {
+    padding: 0;
   }
   .feedback__wrapper {
     display: block;
   }
+
   .feedback__section {
     text-align: center;
     max-width: 100%;
   }
-  .feedback__inner {
-    padding: 0;
+  .feedback__image {
+    display: none;
   }
 }
 
 @media screen and (max-width: 490px) {
+  .feedback__section {
+    padding: 130px 20px;
+  }
   .feedback__title {
     font-size: 25px;
   }
-
   .form__button {
     padding: 10px 50px;
-  }
-  .feedback__section {
-    padding: 130px 20px;
   }
 }
 
@@ -519,15 +505,13 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+  .footer__wrapper {
+    grid-template-columns: 1fr;
+  }
   .footer__link,
   .footer__phone {
     display: none;
   }
-
-  .footer__wrapper {
-    grid-template-columns: 1fr;
-  }
-
   .footer__logo {
     margin-right: 0;
   }
